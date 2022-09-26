@@ -1,0 +1,55 @@
+int var_glob_x;
+int var_glob_z;
+
+int hello_world();
+int produit(int num1, int num2);
+int max(int a, int b, int c);
+
+int main(){
+    int age;
+    int y;
+    
+    age = 10;
+    produit(age, 1);
+    y = var_glob_x;
+
+    if(age > 15)
+        age = age + (15 - age);
+    else {
+        age = 20; 
+        y = age - 1;
+    }
+
+    while(age < 10){
+        age = age + 1;
+        hello_world();
+    }
+
+    return 0;
+}
+
+int hello_world(){
+    ;
+}
+
+int produit(int num1, int num2){
+    var_glob_x = num1 * num2;
+    return var_glob_x;
+}
+
+int max(int a, int b, int c){
+    int maximum;
+    if(a > b){
+        if(a > c){
+            maximum = a;
+        } else {
+            maximum = c;
+        }
+    } else {
+        if(b > c){
+            maximum = b;
+        } else {
+            maximum = c;
+        }
+    }
+}
